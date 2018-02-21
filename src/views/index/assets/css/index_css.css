@@ -1,4 +1,22 @@
 /* Index CSS: */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+/*
+ * Defaults
+ */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 400;
+}
 
 /*
  * Scaffolding
@@ -47,11 +65,15 @@
 
 .header {
     background-image: url('../images/my-porter-header.jpg');
-    /* background: center center; */
     background-size: cover;
     background-repeat: no-repeat;
     height: 90vh;
     width: 100%;
     top: 0;
-    left: 0
+    left: 0;
+    overflow: auto;
+}
+
+.header-content {
+    margin: 50px 0 0 35px;
 }
