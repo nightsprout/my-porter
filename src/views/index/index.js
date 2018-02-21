@@ -6,7 +6,7 @@ import './assets/css/index_css.css'
 class Index extends Component {
   render() {
     return(
-      <div>
+      <div className="page-container">
         <div className="menu">
           <div className="logo-container">
           <img alt="site-logo" src={require('./assets/images/logo-tagline-e5bcf434b535e6f9811420ed88f572a801788c7850aa5e7b6f0af05055827d8f.png')} />
@@ -20,12 +20,13 @@ class Index extends Component {
             </ul>
           </div>
         </div>
-        <div className="page-container">
+        <div className="content-container">
           <div className="header">
-            <h2>The Easiest Way to Store Your Stuff</h2>
-            <h3>Free Pick-up. Online Inventory. On-Demand Delivery.</h3>
-            <div className="button button-solid">Reserve Your Free Pickup</div>
-            <div className="zipcode-search">
+            <div className="header-content">
+              <h2>The Easiest Way to Store Your Stuff</h2>
+              <h3>Free Pick-up. Online Inventory. On-Demand Delivery.</h3>
+            </div>
+            <div className="header-zipcode-search">
               <h3>Find your storage solution</h3>
               <form>
                 <input placeholder="Zip Code"/>
