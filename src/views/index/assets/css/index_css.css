@@ -1,5 +1,28 @@
-// Index CSS:
+/* Index CSS: */
 
-.logo-container {
-    width: 20vw
+/*
+ * Menu
+ */
+.menu {
+    height: 125px;
+    background-color: #ededed;
+    margin: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    align-items: center;
+}
+
+
+.logo-container img{
+    width: 20vmax;
+    margin: 10px 0 10px 35px;
+}
+
+.menu-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    list-style-type: none;
 }
