@@ -7,6 +7,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Index from './views/index/index';
 import Item from './views/item/item';
 import Pricing from './views/pricing/pricing';
+import Dashboard from './views/dashboard/dashboard';
+import Calculator from './views/calculator/calculator';
 
 class App extends Component {
   render() {
@@ -18,6 +20,8 @@ class App extends Component {
             <Route exact path="/" component={Index} />
             <Route path="/item" component={Item} />
             <Route path="/pricing" component={Pricing} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/calculator" component={Calculator} />
           </div>
         </Router>
       </div>
