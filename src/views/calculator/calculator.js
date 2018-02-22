@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
+import TextField from 'material-ui/TextField';
 
 import './assets/css/calculator_css.css'
 
@@ -143,10 +144,28 @@ class Calculator extends Component {
     </div>;
     for (let item in this.state.inventory_types) {
       items.push(
+        // <div key={item}>
+        //   <label>{item}</label>
+        //   <input value={this.state.inventory_types[item].quantity} onChange={(e) => this.updateQuantity(item, e)} type="number" />
+        //   <div>{this.state.inventory_types[item].quantity * this.state.inventory_types[item].value}</div>
+        // </div>
         <div key={item}>
-          <label>{item}</label>
-          <input value={this.state.inventory_types[item].quantity} onChange={(e) => this.updateQuantity(item, e)} type="number" />
-          <div>{this.state.inventory_types[item].quantity * this.state.inventory_types[item].value}</div>
+          <TextField 
+            floatingLabelText={item}
+            value={this.state.inventory_types[item].quantity}
+            onChange={(e) => this.updateQuantity(item, e)}
+            inputStyle={{
+              color: '#555'
+            }}
+            floatingLabelFocusStyle={{
+              color: '#98c746'
+            }}
+            underlineFocusStyle={{
+              border: '1px solid #98c746'
+            }}
+            type="number" />
+        <div>{this.state.inventory_types[item].quantity * this.state.inventory_types[item].value}</div>
+
         </div>
       );
     }
