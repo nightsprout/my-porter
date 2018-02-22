@@ -89,23 +89,23 @@ class Index extends Component {
             </form>
             <div className="storage-options">
               <div className="storage-option five-five">
-                <div>
-                <img alt="5 by 5 storage example" src={require('./assets/images/products/5x5.jpg')} />
+                <div className="product-image">
+                  <img alt="5 by 5 storage example" src={require('./assets/images/products/5x5.jpg')} />
                 </div>
-                <div>
+                <div className="product-data">
                   <div>
                     <div>
-                      5'x5'<br/>
+                      <span class="highlight">5'x5'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
-                      $__<br/>
+                      $<span className="highlight">__</span><br/>
                       per month
                     </div>
                   </div>
                   <div>
                     <RaisedButton
-                      className="header-zipcode-search-input-submit"
+                      className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
                       or call <a tel="8449767837">844.976.7837</a>
@@ -113,23 +113,23 @@ class Index extends Component {
                 </div>
               </div>
               <div className="storage-option five-ten">
-                <div>
-                <img alt="5 by 5 storage example" src={require('./assets/images/products/5x10.jpg')} />
+                <div className="product-image">
+                  <img alt="5 by 10 storage example" src={require('./assets/images/products/5x10.jpg')} />
                 </div>
-                <div>
+                <div className="product-data">
                   <div>
                     <div>
-                      5'x5'<br/>
+                      <span className="highlight">5'x10'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
-                      $__<br/>
+                      $<span className="highlight">__</span><br/>
                       per month
                     </div>
                   </div>
                   <div>
                     <RaisedButton
-                      className="header-zipcode-search-input-submit"
+                      className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
                       or call <a tel="8449767837">844.976.7837</a>
@@ -137,23 +137,23 @@ class Index extends Component {
                 </div>
               </div>
               <div className="storage-option five-fifteen">
-                <div>
-                <img alt="5 by 5 storage example" src={require('./assets/images/products/5x15.jpg')} />
+                <div className="product-image">
+                <img alt="5 by 15 storage example" src={require('./assets/images/products/5x15.jpg')} />
                 </div>
-                <div>
+                <div className="product-data">
                   <div>
                     <div>
-                      5'x5'<br/>
+                      <span className="highlight">5'x15'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
-                      $__<br/>
+                      $<span className="highlight">__</span><br/>
                       per month
                     </div>
                   </div>
                   <div>
                     <RaisedButton
-                      className="header-zipcode-search-input-submit"
+                      className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
                       or call <a tel="8449767837">844.976.7837</a>
@@ -161,23 +161,23 @@ class Index extends Component {
                 </div>
               </div>
               <div className="storage-option ten-ten">
-                <div>
-                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x10.jpg')} />
+                <div className="product-image">
+                <img alt="10 by 10 storage example" src={require('./assets/images/products/10x10.jpg')} />
                 </div>
-                <div>
+                <div className="product-data">
                   <div>
                     <div>
-                      5'x5'<br/>
+                      <span className="highlight">10'x10'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
-                      $__<br/>
+                      $<span className="highlight">__</span><br/>
                       per month
                     </div>
                   </div>
                   <div>
                     <RaisedButton
-                      className="header-zipcode-search-input-submit"
+                      className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
                       or call <a tel="8449767837">844.976.7837</a>
@@ -185,23 +185,23 @@ class Index extends Component {
                 </div>
               </div>
               <div className="storage-option ten-twelve-half">
-                <div>
-                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x12_5.jpg')} />
+                <div className="product-image">
+                <img alt="10 by 12 and a half storage example" src={require('./assets/images/products/10x12_5.jpg')} />
                 </div>
-                <div>
+                <div className="product-data">
                  <div>
                     <div>
-                      5'x5'<br/>
+                      <span className="highlight">10'x12.5'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
-                      $__<br/>
+                      $<span className="highlight">__</span><br/>
                       per month
                     </div>
                   </div>
                   <div>
                     <RaisedButton
-                      className="header-zipcode-search-input-submit"
+                      className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
                       or call <a tel="8449767837">844.976.7837</a>
@@ -209,23 +209,23 @@ class Index extends Component {
                 </div>
               </div>
               <div className="storage-option ten-fifteen">
-                <div>
-                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x15.jpg')} />
+                <div className="product-image">
+                <img alt="10 by 15 storage example" src={require('./assets/images/products/10x15.jpg')} />
                 </div>
-                <div>
+                <div className="product-data">
                   <div>
                     <div>
-                      5'x5'<br/>
+                      <span className="highlight">10'x15'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
-                      $__<br/>
+                      $<span className="highlight">__</span><br/>
                       per month
                     </div>
                   </div>
                   <div>
                     <RaisedButton
-                      className="header-zipcode-search-input-submit"
+                      className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
                       or call <a tel="8449767837">844.976.7837</a>
@@ -233,23 +233,23 @@ class Index extends Component {
                 </div>
               </div>
               <div className="storage-option ten-twenty">
-                <div>
-                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x20.jpg')} />
+                <div className="product-image">
+                <img alt="10 by 20 storage example" src={require('./assets/images/products/10x20.jpg')} />
                 </div>
-                <div>
+                <div className="product-data">
                   <div>
                     <div>
-                      5'x5'<br/>
+                      <span className="highlight">10'x20'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
-                      $__<br/>
+                      $<span className="highlight">__</span><br/>
                       per month
                     </div>
                   </div>
                   <div>
                     <RaisedButton
-                      className="header-zipcode-search-input-submit"
+                      className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
                       or call <a tel="8449767837">844.976.7837</a>
@@ -257,26 +257,26 @@ class Index extends Component {
                 </div>
               </div>
               <div className="storage-option ten-twentyfive">
-                <div>
-                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x30.jpg')} />
+                <div className="product-image">
+                <img alt="10 by 25 storage example" src={require('./assets/images/products/10x30.jpg')} />
                 </div>
-                <div>
+                <div className="product-data">
                   <div>
                     <div>
-                      5'x5'<br/>
+                      <span className="highlight">10'x25'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
-                      $__<br/>
+                      $<span className="highlight">__</span><br/>
                       per month
                     </div>
                   </div>
                   <div>
                     <RaisedButton
-                      className="header-zipcode-search-input-submit"
+                      className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
-                      or call <a tel="8449767837">844.976.7837</a>
+                      or call <a href="tel:8449767837">844.976.7837</a>
                   </div>
                 </div>
               </div>
