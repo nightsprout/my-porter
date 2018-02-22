@@ -10,9 +10,9 @@ class Index extends Component {
   render() {
     return(
       <div className="page-container">
-        <div className="menu">
+        <Paper className="menu">
           <div className="logo-container">
-          <img alt="site-logo" src={require('./assets/images/logo-tagline.png')} />
+           <img alt="site-logo" src={require('./assets/images/logo-tagline.png')} />
           </div>
           <div className="menu-container">
             <ul>
@@ -22,15 +22,15 @@ class Index extends Component {
               <li>Item 4</li> 
             </ul>
           </div>
-        </div>
+        </Paper>
         <div className="content-container">
           <div className="header">
             <div className="header-content">
-              <h2>The Easiest Way to Store Your Stuff</h2>
+              <h2 className="h1">The Easiest Way to Store Your Stuff</h2>
               <h3>Free Pick-up. Online Inventory. On-Demand Delivery.</h3>
             </div>
             <div className="header-zipcode-search">
-              <h3>Find your storage solution</h3>
+              <h3 className="dark">Find your storage solution</h3>
               <form>
                 <TextField
                   floatingLabelText="Zip Code"
