@@ -4,86 +4,13 @@
 /*
  * Defaults
  */
-body {
+/* body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
-}
-
-h1, .h1, h2, .h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-h1, .h1 {
-    font-size: 2.5rem;
-}
-
-h2, .h2 {
-    font-size: 2rem
-}
-
-h3, .h3 {
-    font-weight: 400;
-}
-
-a {
-    color: #98c746;
-    transition: all .25s
-}
-
-.dark {
-    color: #555;
-}
-
-.light {
-    color: #ededed;
-}
-
-a:hover {
-    color: #7BAD26
-}
-
-/*
- * Scaffolding
- */
-
-.content-container {
-    position: relative;
-    top: 105px;
-}
-
-/*
- * Menu
- */
-.menu {
-    height: 125px;
-    background-color: #ededed;
-    margin: 0;
-    position: fixed;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-content: center;
-    align-items: center;
-    z-index: 50;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
+} */
 
 
-.logo-container img{
-    width: 20vmax;
-    margin: 10px 0 10px 35px;
-}
-
-.menu-container ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100%;
-    list-style-type: none;
-}
 
 
 /*
