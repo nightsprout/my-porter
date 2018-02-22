@@ -9,6 +9,20 @@ class Calculator extends Component {
     super(props);
     this.state = {
       inventory_total: 0,
+      storage_size_necessary: { "5x5": 100 },
+      storage_types: {
+        "5x5":         100,
+        "5x10":        200,
+        "5x15":        300,
+        "10x10":       400,
+        "10x12.5":     500,
+        "10x15":       600,
+        "10x17.5":     700,
+        "10x20":       800,
+        "10x25":       1000,
+        "10x30":       1200,
+        "Contact Us":  999999999,
+      },
       inventory_types: {
         "Bins":                         { value: 4, quantity: 0 },
         "Headboard":                    { value: 3, quantity: 0 },
@@ -64,12 +78,15 @@ class Calculator extends Component {
   }
 
   updateQuantity(itemKey, event) {
-    let total = 0;
     let updatedItem = {};
+    let newInventoryTotal;
+    let newStorageSizeNecessary;
+    // Update item quantity.
     updatedItem[itemKey] = {
       ...this.state.inventory_types[itemKey],
       quantity: event.target.value
     };
+    // Update the inventory.
     let newState = {
       ...this.state,
       inventory_types: {
@@ -77,20 +94,51 @@ class Calculator extends Component {
         ...updatedItem
       }
     };
-    for (let item in newState.inventory_types) {
-      total = total + (newState.inventory_types[item].quantity * newState.inventory_types[item].value);
-    }
+    // Update the total square footage needed by the new inventory.
+    newInventoryTotal = this.recalculateInventoryTotal(newState);
+    newStorageSizeNecessary = this.redetermineStorageSizeNecessary(newInventoryTotal);
     newState = {
       ...newState,
-      inventory_total: total,
+      storage_size_necessary: newStorageSizeNecessary,
+      inventory_total: newInventoryTotal,
     }
     this.setState(newState);
+  }
+
+  recalculateInventoryTotal(preTotalState) {
+    let total = 0;
+    for (let item in preTotalState.inventory_types) {
+      total = total + (preTotalState.inventory_types[item].quantity * preTotalState.inventory_types[item].value);
+    }
+    return total;
+  }
+
+  redetermineStorageSizeNecessary(storageSizeNecessary) {
+    let sizes = [];
+    let newStorageSizeNecessary = {};
+    for (let storageTypeName1 in this.state.storage_types) {
+      sizes.push(this.state.storage_types[storageTypeName1]);
+    }
+    sizes.sort(function(a, b){return a - b});
+    for (var i=0; i < sizes.length; i++) {
+      if (storageSizeNecessary <= sizes[i]) {
+        storageSizeNecessary = sizes[i];
+        break;
+      }
+    }
+    for ( let storageTypeName2 in this.state.storage_types ) {
+      if ( storageSizeNecessary === this.state.storage_types[storageTypeName2] ) {
+        newStorageSizeNecessary[storageTypeName2] = storageSizeNecessary;
+      }
+    }
+    return newStorageSizeNecessary;
   }
 
   returnForm() {
     let items = [];
     let container = <div>
       <div>Total: {this.state.inventory_total}</div>
+      <div>Size Necessary: {Object.keys(this.state.storage_size_necessary)[0]}</div>
       {items}
     </div>;
     for (let item in this.state.inventory_types) {
