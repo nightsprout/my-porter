@@ -55,15 +55,15 @@ class Index extends Component {
             <div className="how-it-works-container">
               <div>
                 <img alt="We pick up your packed boxes" src={require('./assets/images/process-1.png')} />
-                <span>We pick yp your packed boxes and other stuff you want to store.</span>
+                <p>We pick yp your packed boxes and other stuff you want to store.</p>
               </div>
               <div>
                 <img alt="We pick up your packed boxes" src={require('./assets/images/process-2.png')} />
-                <span>We store your items safely and securely.</span>
+                <p>We store your items safely and securely.</p>
               </div>
               <div>
                 <img alt="We pick up your packed boxes" src={require('./assets/images/process-3.png')} />
-                <span>You order back anything you want from your online visual catalog.</span>
+                <p>You order back anything you want from your online visual catalog.</p>
               </div>
             </div>
           </div>
