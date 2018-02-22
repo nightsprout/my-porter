@@ -112,6 +112,8 @@ h3 {
 
  .section.how-it-works {
      text-align: center;
+     background: #ededed;
+     overflow: auto;
  }
 
 .how-it-works-container {
@@ -130,4 +132,27 @@ h3 {
 .how-it-works-container div img {
     width: 100%;
     height: auto;
+}
+
+/*
+ * Products Grid
+ */
+.section.price-listing h2{
+    text-align: center;
+}
+
+.price-listing-zipcode-search {
+    margin: 0 auto;
+    width: 370px;
+}
+
+.storage-options {
+    margin: 20px 15px;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: repeat(4, min-content);
+    grid-auto-flow: column;
+    grid-row-gap: 20px;
+    width: 60%;
+    margin: 25px auto;
 }

@@ -58,84 +58,226 @@ class Index extends Component {
                 <p>We pick yp your packed boxes and other stuff you want to store.</p>
               </div>
               <div>
-                <img alt="We pick up your packed boxes" src={require('./assets/images/process-2.png')} />
+                <img alt="We store your boxes safely" src={require('./assets/images/process-2.png')} />
                 <p>We store your items safely and securely.</p>
               </div>
               <div>
-                <img alt="We pick up your packed boxes" src={require('./assets/images/process-3.png')} />
+                <img alt="Order back anything you'd like" src={require('./assets/images/process-3.png')} />
                 <p>You order back anything you want from your online visual catalog.</p>
               </div>
             </div>
           </div>
           <div className="section price-listing">
             <h2>Find Your Storage Solution</h2>
-            <form>
-              <input placeholder="Zip Code"/>
-              <input type="submit"/>
+            <form className="price-listing-zipcode-search">
+            <TextField
+                  floatingLabelText="Zip Code"
+                  inputStyle={{
+                    color: '#555'
+                  }}
+                  floatingLabelFocusStyle={{
+                    color: '#98c746'
+                  }}
+                  underlineFocusStyle={{
+                    border: '1px solid #98c746'
+                  }}
+                  className="header-zipcode-search-input" />
+                <RaisedButton
+                  className="header-zipcode-search-input-submit"
+                  backgroundColor='#98c746'
+                  label="Submit"/>
             </form>
             <div className="storage-options">
               <div className="storage-option five-five">
                 <div>
-                  Image
+                <img alt="5 by 5 storage example" src={require('./assets/images/products/5x5.jpg')} />
                 </div>
                 <div>
-                  Data &amp; Info
+                  <div>
+                    <div>
+                      5'x5'<br/>
+                      Small Closet Size
+                    </div>
+                    <div>
+                      $__<br/>
+                      per month
+                    </div>
+                  </div>
+                  <div>
+                    <RaisedButton
+                      className="header-zipcode-search-input-submit"
+                      backgroundColor='#98c746'
+                      label="Book Now"/><br/>
+                      or call <a tel="8449767837">844.976.7837</a>
+                  </div>
                 </div>
               </div>
               <div className="storage-option five-ten">
                 <div>
-                  Image
+                <img alt="5 by 5 storage example" src={require('./assets/images/products/5x10.jpg')} />
                 </div>
                 <div>
-                  Data &amp; Info
+                  <div>
+                    <div>
+                      5'x5'<br/>
+                      Small Closet Size
+                    </div>
+                    <div>
+                      $__<br/>
+                      per month
+                    </div>
+                  </div>
+                  <div>
+                    <RaisedButton
+                      className="header-zipcode-search-input-submit"
+                      backgroundColor='#98c746'
+                      label="Book Now"/><br/>
+                      or call <a tel="8449767837">844.976.7837</a>
+                  </div>
                 </div>
               </div>
               <div className="storage-option five-fifteen">
                 <div>
-                  Image
+                <img alt="5 by 5 storage example" src={require('./assets/images/products/5x15.jpg')} />
                 </div>
                 <div>
-                  Data &amp; Info
+                  <div>
+                    <div>
+                      5'x5'<br/>
+                      Small Closet Size
+                    </div>
+                    <div>
+                      $__<br/>
+                      per month
+                    </div>
+                  </div>
+                  <div>
+                    <RaisedButton
+                      className="header-zipcode-search-input-submit"
+                      backgroundColor='#98c746'
+                      label="Book Now"/><br/>
+                      or call <a tel="8449767837">844.976.7837</a>
+                  </div>
                 </div>
               </div>
               <div className="storage-option ten-ten">
                 <div>
-                  Image
+                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x10.jpg')} />
                 </div>
                 <div>
-                  Data &amp; Info
+                  <div>
+                    <div>
+                      5'x5'<br/>
+                      Small Closet Size
+                    </div>
+                    <div>
+                      $__<br/>
+                      per month
+                    </div>
+                  </div>
+                  <div>
+                    <RaisedButton
+                      className="header-zipcode-search-input-submit"
+                      backgroundColor='#98c746'
+                      label="Book Now"/><br/>
+                      or call <a tel="8449767837">844.976.7837</a>
+                  </div>
                 </div>
               </div>
               <div className="storage-option ten-twelve-half">
                 <div>
-                  Image
+                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x12_5.jpg')} />
                 </div>
                 <div>
-                  Data &amp; Info
+                 <div>
+                    <div>
+                      5'x5'<br/>
+                      Small Closet Size
+                    </div>
+                    <div>
+                      $__<br/>
+                      per month
+                    </div>
+                  </div>
+                  <div>
+                    <RaisedButton
+                      className="header-zipcode-search-input-submit"
+                      backgroundColor='#98c746'
+                      label="Book Now"/><br/>
+                      or call <a tel="8449767837">844.976.7837</a>
+                  </div>
                 </div>
               </div>
               <div className="storage-option ten-fifteen">
                 <div>
-                  Image
+                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x15.jpg')} />
                 </div>
                 <div>
-                  Data &amp; Info
+                  <div>
+                    <div>
+                      5'x5'<br/>
+                      Small Closet Size
+                    </div>
+                    <div>
+                      $__<br/>
+                      per month
+                    </div>
+                  </div>
+                  <div>
+                    <RaisedButton
+                      className="header-zipcode-search-input-submit"
+                      backgroundColor='#98c746'
+                      label="Book Now"/><br/>
+                      or call <a tel="8449767837">844.976.7837</a>
+                  </div>
                 </div>
               </div>
               <div className="storage-option ten-twenty">
                 <div>
-                  Image
+                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x20.jpg')} />
                 </div>
                 <div>
-                  Data &amp; Info
+                  <div>
+                    <div>
+                      5'x5'<br/>
+                      Small Closet Size
+                    </div>
+                    <div>
+                      $__<br/>
+                      per month
+                    </div>
+                  </div>
+                  <div>
+                    <RaisedButton
+                      className="header-zipcode-search-input-submit"
+                      backgroundColor='#98c746'
+                      label="Book Now"/><br/>
+                      or call <a tel="8449767837">844.976.7837</a>
+                  </div>
                 </div>
               </div>
               <div className="storage-option ten-twentyfive">
                 <div>
-                  Image
+                <img alt="5 by 5 storage example" src={require('./assets/images/products/10x30.jpg')} />
                 </div>
                 <div>
-                  Data &amp; Info
+                  <div>
+                    <div>
+                      5'x5'<br/>
+                      Small Closet Size
+                    </div>
+                    <div>
+                      $__<br/>
+                      per month
+                    </div>
+                  </div>
+                  <div>
+                    <RaisedButton
+                      className="header-zipcode-search-input-submit"
+                      backgroundColor='#98c746'
+                      label="Book Now"/><br/>
+                      or call <a tel="8449767837">844.976.7837</a>
+                  </div>
                 </div>
               </div>
             </div>
