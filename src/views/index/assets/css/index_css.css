@@ -80,9 +80,15 @@ h3 {
     bottom: 0;
     margin: 0 auto;
     display: block;
-    width: 275px;
+    width: 450px;
+    text-align: center;
     left: 0;
     right: 0;
+    background-color: #ededed;
+}
+
+.header-zipcode-search-input-submit {
+    margin: 0 0 0 25px;
 }
 
 .header-content {
@@ -92,3 +98,5 @@ h3 {
 /*
  * How it works
  */
+
+ 

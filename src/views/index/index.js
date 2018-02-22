@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
+import TextField from 'material-ui/TextField';
 
 import './assets/css/index_css.css'
+import { RaisedButton } from 'material-ui';
 
 class Index extends Component {
   render() {
@@ -29,8 +31,22 @@ class Index extends Component {
             <div className="header-zipcode-search">
               <h3>Find your storage solution</h3>
               <form>
-                <input placeholder="Zip Code"/>
-                <input type="submit"/>
+                <TextField
+                  floatingLabelText="Zip Code"
+                  inputStyle={{
+                    color: '#555'
+                  }}
+                  floatingLabelFocusStyle={{
+                    color: '#98c746'
+                  }}
+                  underlineFocusStyle={{
+                    border: '1px solid #98c746'
+                  }}
+                  className="header-zipcode-search-input" />
+                <RaisedButton
+                  className="header-zipcode-search-input-submit"
+                  backgroundColor='#98c746'
+                  label="Submit"/>
               </form>
             </div>
           </div>
