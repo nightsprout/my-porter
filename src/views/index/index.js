@@ -9,7 +9,7 @@ class Index extends Component {
       <div className="page-container">
         <div className="menu">
           <div className="logo-container">
-          <img alt="site-logo" src={require('./assets/images/logo-tagline-e5bcf434b535e6f9811420ed88f572a801788c7850aa5e7b6f0af05055827d8f.png')} />
+          <img alt="site-logo" src={require('./assets/images/logo-tagline.png')} />
           </div>
           <div className="menu-container">
             <ul>
@@ -36,17 +36,19 @@ class Index extends Component {
           </div>
           <div className="section how-it-works">
             <h2>How It Works</h2>
-            <div>
-              Hold Image One
-              <span>We pick yp your packed boxes and other stuff you want to store.</span>
-            </div>
-            <div>
-              Hold Image Two
-              <span>We store your items safely and securely.</span>
-            </div>
-            <div>
-              Hold Image Three
-              <span>You order back anything you want from your online visual catalog.</span>
+            <div className="how-it-works-container">
+              <div>
+                <img alt="We pick up your packed boxes" src={require('./assets/images/process-1.png')} />
+                <span>We pick yp your packed boxes and other stuff you want to store.</span>
+              </div>
+              <div>
+                <img alt="We pick up your packed boxes" src={require('./assets/images/process-2.png')} />
+                <span>We store your items safely and securely.</span>
+              </div>
+              <div>
+                <img alt="We pick up your packed boxes" src={require('./assets/images/process-3.png')} />
+                <span>You order back anything you want from your online visual catalog.</span>
+              </div>
             </div>
           </div>
           <div className="section price-listing">
