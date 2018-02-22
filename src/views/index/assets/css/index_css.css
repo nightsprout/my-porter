@@ -29,6 +29,15 @@ h3 {
     font-weight: 400;
 }
 
+a {
+    color: #98c746;
+    transition: all .25s
+}
+
+a:hover {
+    color: #7BAD26
+}
+
 /*
  * Scaffolding
  */
@@ -145,17 +154,27 @@ h3 {
     margin: 0 auto;
     width: 370px;
 }
-
-.storage-options {
+/* Non-responsive */
+/* .storage-options {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: min-content;
     grid-auto-flow: row;
     grid-row-gap: 20px;
-    /* width: 60%; */
     margin: 25px auto;
     justify-items: center;
+} */
+
+.storage-options {
+    display: grid;
+    margin: 25px auto;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 10px;
+
 }
+
+
 
 .storage-option {
     text-align: center;
@@ -165,4 +184,9 @@ h3 {
 .product-data span.highlight {
     color: #95c746;
     font-size: 1.5rem;
+    margin: 2px;
+}
+
+.product-data a {
+    margin: 2px;
 }

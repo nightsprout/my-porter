@@ -4,6 +4,7 @@ import TextField from 'material-ui/TextField';
 
 import './assets/css/index_css.css'
 import { RaisedButton } from 'material-ui';
+import { Paper } from 'material-ui';
 
 class Index extends Component {
   render() {
@@ -108,7 +109,7 @@ class Index extends Component {
                       className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
-                      or call <a tel="8449767837">844.976.7837</a>
+                      or call <a href="tel:8449767837">844.976.7837</a>
                   </div>
                 </div>
               </div>
@@ -120,7 +121,7 @@ class Index extends Component {
                   <div>
                     <div>
                       <span className="highlight">5'x10'</span><br/>
-                      Small Closet Size
+                      Walkin Closet Size
                     </div>
                     <div>
                       $<span className="highlight">__</span><br/>
@@ -132,7 +133,7 @@ class Index extends Component {
                       className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
-                      or call <a tel="8449767837">844.976.7837</a>
+                      or call <a href="tel:8449767837">844.976.7837</a>
                   </div>
                 </div>
               </div>
@@ -144,7 +145,7 @@ class Index extends Component {
                   <div>
                     <div>
                       <span className="highlight">5'x15'</span><br/>
-                      Small Closet Size
+                      Bedroom Size
                     </div>
                     <div>
                       $<span className="highlight">__</span><br/>
@@ -156,7 +157,7 @@ class Index extends Component {
                       className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
-                      or call <a tel="8449767837">844.976.7837</a>
+                      or call <a href="tel:8449767837">844.976.7837</a>
                   </div>
                 </div>
               </div>
@@ -168,7 +169,7 @@ class Index extends Component {
                   <div>
                     <div>
                       <span className="highlight">10'x10'</span><br/>
-                      Small Closet Size
+                      Garage Size
                     </div>
                     <div>
                       $<span className="highlight">__</span><br/>
@@ -180,7 +181,7 @@ class Index extends Component {
                       className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
-                      or call <a tel="8449767837">844.976.7837</a>
+                      or call <a href="tel:8449767837">844.976.7837</a>
                   </div>
                 </div>
               </div>
@@ -192,7 +193,7 @@ class Index extends Component {
                  <div>
                     <div>
                       <span className="highlight">10'x12.5'</span><br/>
-                      Small Closet Size
+                      Studio Size
                     </div>
                     <div>
                       $<span className="highlight">__</span><br/>
@@ -204,7 +205,7 @@ class Index extends Component {
                       className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
-                      or call <a tel="8449767837">844.976.7837</a>
+                      or call <a href="tel:8449767837">844.976.7837</a>
                   </div>
                 </div>
               </div>
@@ -216,7 +217,7 @@ class Index extends Component {
                   <div>
                     <div>
                       <span className="highlight">10'x15'</span><br/>
-                      Small Closet Size
+                      Studo/1 Bed. Size
                     </div>
                     <div>
                       $<span className="highlight">__</span><br/>
@@ -228,7 +229,7 @@ class Index extends Component {
                       className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
-                      or call <a tel="8449767837">844.976.7837</a>
+                      or call <a href="tel:8449767837">844.976.7837</a>
                   </div>
                 </div>
               </div>
@@ -240,7 +241,7 @@ class Index extends Component {
                   <div>
                     <div>
                       <span className="highlight">10'x20'</span><br/>
-                      Small Closet Size
+                      1 Bedroom Size
                     </div>
                     <div>
                       $<span className="highlight">__</span><br/>
@@ -252,7 +253,7 @@ class Index extends Component {
                       className="product-book-now"
                       backgroundColor='#98c746'
                       label="Book Now"/><br/>
-                      or call <a tel="8449767837">844.976.7837</a>
+                      or call <a href="tel:8449767837">844.976.7837</a>
                   </div>
                 </div>
               </div>
@@ -264,7 +265,7 @@ class Index extends Component {
                   <div>
                     <div>
                       <span className="highlight">10'x25'</span><br/>
-                      Small Closet Size
+                      Apartment Size
                     </div>
                     <div>
                       $<span className="highlight">__</span><br/>
