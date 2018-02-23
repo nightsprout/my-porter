@@ -2,8 +2,8 @@
 
 .calculator-container {
   padding: 0 0 40px 30px;
-  margin: 0 auto;
-  border: 3px solid #857f7f;
+  margin: 0 auto 20px auto;
+  /*border: 3px solid #857f7f;*/
   border-radius: 7px;
   width: 990px;
   position: relative;
@@ -22,7 +22,7 @@
   margin: 0 0 40px 0;
   position: relative;
   right: 30px;
-  top: 40px;
+  top: 10px;
   text-align: center;
 }
 

@@ -22,17 +22,18 @@ export default ({ length, width, text, price, isDefault }) => (
     <div className="product-data">
       <div>
         <div>
-          <span className="highlight">{`${length}' x ${width}'`}</span><br/>
+          <span className="highlight" style={{display: 'block', margin: '10px 0 5px 0'}}>{`${length}' x ${width}'`}</span>
             {text}
         </div>
-        <div>
+        <div style={{display: 'block', margin: '10px 0 15px 0'}}>
           $<span className="highlight">{price}</span><br/>
-          per month
+          <span style={{fontSize: '12px'}}>per month</span>
         </div>
       </div>
       <div>
         <RaisedButton
           className="product-book-now"
+          style={{margin: '0 0 15px 0'}}
           backgroundColor='#98c746'
           label="Book Now"/>
         <br/>

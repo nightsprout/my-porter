@@ -91,10 +91,8 @@ class Index extends Component {
           </div>
           <div className="menu-container">
             <ul>
+              <li><Link to="/">Home</Link></li>
               <li><Link to="/calculator">Storage Calculator</Link></li>
-              <li><Link to="/calculator">Item 2</Link></li>
-              <li><Link to="/calculator">Item 3</Link></li>
-              <li><Link to="/calculator">Item 4</Link></li>
             </ul>
           </div>
         </Paper>
@@ -148,24 +146,24 @@ class Index extends Component {
           </div>
           <div className="section price-listing">
             <h2>Find Your Storage Solution</h2>
-            <form className="price-listing-zipcode-search">
-            <TextField
-                  floatingLabelText="Zip Code"
-                  inputStyle={{
-                    color: '#555'
-                  }}
-                  floatingLabelFocusStyle={{
-                    color: '#98c746'
-                  }}
-                  underlineFocusStyle={{
-                    border: '1px solid #98c746'
-                  }}
-                  className="header-zipcode-search-input" />
-                <RaisedButton
-                  className="header-zipcode-search-input-submit"
-                  backgroundColor='#98c746'
-                  label="Submit"/>
-            </form>
+            {/*<form className="price-listing-zipcode-search">
+                          <TextField
+                            floatingLabelText="Zip Code"
+                            inputStyle={{
+                              color: '#555'
+                            }}
+                            floatingLabelFocusStyle={{
+                              color: '#98c746'
+                            }}
+                            underlineFocusStyle={{
+                              border: '1px solid #98c746'
+                            }}
+                            className="header-zipcode-search-input" />
+                          <RaisedButton
+                            className="header-zipcode-search-input-submit"
+                            backgroundColor='#98c746'
+                            label="Submit"/>
+                        </form>*/}
             {this.renderOptions()}
           </div>
         </div>

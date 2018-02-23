@@ -74,16 +74,42 @@ span.highlight {
 }
 
 
-.logo-container img{
-  width: 20vmax;
-  margin: 10px 0 10px 35px;
+.logo-container a {
+  display: block;
+  float: left;
+  position: relative;
+  top: -8px;
+  left: 20px;
+}
+
+.logo-container a img {
+/*  width: 20vmax;
+  margin: 10px 0 10px 35px;*/
+  display: block;
+  float: left;
+  width: 200px;
 }
 
 .menu-container ul {
-  display: grid;
+/*  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 100%;
-  list-style-type: none;
+  list-style-type: none;*/
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-container ul li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 20px;
+}
+
+.menu-container ul li a {
+  text-decoration: none;
 }
 
 /* .App {
