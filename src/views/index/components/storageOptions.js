@@ -37,6 +37,12 @@ export default [
   },
   {
     length: '10',
+    width: '17.5',
+    text: 'Large Studio Size',
+    defaultPrice: 229,
+  },
+  {
+    length: '10',
     width: '20',
     text: '2-Car Garage Size',
     defaultPrice: 259,
@@ -44,7 +50,13 @@ export default [
   {
     length: '10',
     width: '25',
-    text: 'Apartment Size',
+    text: 'Small Apartment Size',
     defaultPrice: 299,
+  },
+  {
+    length: '10',
+    width: '30',
+    text: 'Apartment Size',
+    defaultPrice: 329,
   },
 ]
