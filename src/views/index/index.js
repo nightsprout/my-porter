@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 
 import './assets/css/index_css.css'
 import { TextField, RaisedButton, Paper } from 'material-ui';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor';
 
 import atlantaZipCodes from './components/atlantaZipCodes';
 import storageOptions from './components/storageOptions'
-import StorageItem from './components/storageItem'
+import StorageItem from './components/storageItem';
+
+configureAnchors({offset: -125, scrollDuration: 200})
 
 class Index extends Component {
   constructor(props) {
@@ -146,10 +150,11 @@ class Index extends Component {
               </div>
               <div>
                 <img alt="Order back anything you'd like" src={require('./assets/images/process-3.png')} />
-                <p id="storage-options">You order back anything you want from your online visual catalog.</p>
+                <p>You order back anything you want from your online visual catalog.</p>
               </div>
             </div>
           </div>
+          <ScrollableAnchor id={'storage-options'}>
           <div className="section price-listing">
             <h2>Find Your Storage Solution</h2>
             {/*<form className="price-listing-zipcode-search">
@@ -172,6 +177,7 @@ class Index extends Component {
                         </form>*/}
             {this.renderOptions()}
           </div>
+          </ScrollableAnchor>
         </div>
         {/* <ol>
           <li><Link to="/">Index</Link></li>
