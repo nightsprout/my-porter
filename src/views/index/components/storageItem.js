@@ -16,7 +16,7 @@ const dimensionText = {
 const BookButton = props => (
   <Link to={{
     pathname: '/item',
-    state: { props }
+    state: { ...props }
   }}>
     <RaisedButton
       className="product-book-now"

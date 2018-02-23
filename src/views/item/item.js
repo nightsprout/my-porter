@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Paper } from 'material-ui-next';
 import { RaisedButton } from 'material-ui';
 
+import '../index/components/storageItem'
 import './assets/css/item_css.css'
 
 class Item extends Component {
