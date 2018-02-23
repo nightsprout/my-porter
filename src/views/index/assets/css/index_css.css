@@ -53,6 +53,12 @@
     background-color: #ededed;
 }
 
+@media only screen and (max-width: 449px) {
+    .header-zipcode-search {
+        width: 100%;
+    }
+}
+
 .header-zipcode-search-input-submit {
     margin: 0 0 0 25px;
 }
