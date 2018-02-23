@@ -296,7 +296,7 @@ class Calculator extends Component {
           <div className="menu-container">
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/calculator">Storage Calculator</Link></li>
+              <li><Link to="/calculator">Calculator</Link></li>
             </ul>
           </div>
         </Paper>
