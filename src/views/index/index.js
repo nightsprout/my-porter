@@ -1,12 +1,86 @@
 import React, { Component } from 'react';
 // import { Link } from "react-router-dom";
-import TextField from 'material-ui/TextField';
 
 import './assets/css/index_css.css'
-import { RaisedButton } from 'material-ui';
-import { Paper } from 'material-ui';
+import { TextField, RaisedButton, Paper } from 'material-ui';
+
+import atlantaZipCodes from './components/atlantaZipCodes';
+import storageOptions from './components/storageOptions'
+import StorageItem from './components/storageItem'
 
 class Index extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      zipCode: '',
+      distance: null,
+      validZipCode: false,
+    }
+
+    this.handleChange = this.handleChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.setPrice = this.setPrice.bind(this)
+    this.renderOptions = this.renderOptions.bind(this)
+  }
+
+  handleChange(event) {
+    this.setState({
+      ...this.state,
+      zipCode: event.target.value.replace(/\D/g, '').substring(0, 5),
+    })
+  }
+
+  handleClick(event) {
+    event.preventDefault()
+    const { zipCode } = this.state
+
+    if (zipCode.length >= 5 && Object.keys(atlantaZipCodes).includes(zipCode)) {
+      this.setState({
+        ...this.state,
+        distance: atlantaZipCodes[zipCode],
+        validZipCode: true,
+      })
+    } else {
+      this.setState({
+        ...this.state,
+        distance: null,
+        validZipCode: false,
+      })
+    }
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    this.handleClick(event)
+  }
+
+  setPrice(defaultPrice) {
+    const distanceRate = 2.0
+    if (this.state.validZipCode) {
+      return ( Math.ceil(defaultPrice + distanceRate * this.state.distance) )
+    } else {
+      return ( defaultPrice )
+    }
+  }
+
+  renderOptions() {
+    return (
+      <div className="storage-options">
+        {storageOptions.map(option => (
+          <StorageItem
+            key={`${option.length}x${option.width}`}
+            length={option.length}
+            width={option.width}
+            text={option.text}
+            price={this.setPrice(option.defaultPrice)}
+            isDefault={!(this.state.validZipCode)}
+          />
+        ))}
+      </div>
+    )
+  }
+
   render() {
     return(
       <div className="page-container">
@@ -31,7 +105,7 @@ class Index extends Component {
             </div>
             <div className="header-zipcode-search">
               <h3 className="dark">Find your storage solution</h3>
-              <form>
+              <form onSubmit={event => this.handleSubmit(event)}>
                 <TextField
                   floatingLabelText="Zip Code"
                   inputStyle={{
@@ -43,11 +117,14 @@ class Index extends Component {
                   underlineFocusStyle={{
                     border: '1px solid #98c746'
                   }}
-                  className="header-zipcode-search-input" />
+                  className="header-zipcode-search-input"
+                  value={this.state.zipCode}
+                  onChange={this.handleChange} />
                 <RaisedButton
                   className="header-zipcode-search-input-submit"
                   backgroundColor='#98c746'
-                  label="Submit"/>
+                  label="Submit"
+                  onClick={this.handleClick} />
               </form>
             </div>
           </div>
