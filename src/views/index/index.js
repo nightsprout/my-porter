@@ -81,6 +81,7 @@ class Index extends Component {
             text={option.text}
             price={this.setPrice(option.defaultPrice)}
             isDefault={!(this.state.validZipCode)}
+            zipCode={this.state.zipCode}
           />
         ))}
       </div>
