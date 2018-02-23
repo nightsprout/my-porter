@@ -6,52 +6,52 @@ import { Paper } from 'material-ui';
 
 import './assets/css/calculator_css.css'
 
-// var mapStorageSizeNameToTextStrings = {
-//   "5x5": {
-//     name: "Small Closet Size",
-//     image: '5x5'
-//   },
-//   "5x10": {
-//     name: "Walkin Closet Size",
-//     image: '5x10'
-//   },
-//   "5x15": {
-//     name: "Bedroom Size",
-//     image: '5x15'
-//   },
-//   "10x10": {
-//     name: "Garage Size",
-//     image: '10x10'
-//   },
-//   "10x12.5": {
-//     name: "Studio Size",
-//     image: '10x12_5'
-//   },
-//   "10x15": {
-//     name: "Studio/1BR Size",
-//     image: '10x15'
-//   },
-//   "10x17.5": {
-//     name: "1BR Size",
-//     image: '10x20'
-//   },
-//   "10x20": {
-//     name: "1BR Size",
-//     image: '10x20'
-//   },
-//   "10x25": {
-//     name: "Apartment Size",
-//     image: '10x25'
-//   },
-//   "10x30": {
-//     name: "Apartment Size",
-//     image: '10x25'
-//   },
-//   "Contact Us": {
-//     name: "Custom Sizing",
-//     image: '10x25'
-//   }
-// }
+var mapStorageSizeNameToTextStrings = {
+  "5x5": {
+    name: "Small Closet Size",
+    image: '5x5'
+  },
+  "5x10": {
+    name: "Walkin Closet Size",
+    image: '5x10'
+  },
+  "5x15": {
+    name: "Bedroom Size",
+    image: '5x15'
+  },
+  "10x10": {
+    name: "Garage Size",
+    image: '10x10'
+  },
+  "10x12.5": {
+    name: "Studio Size",
+    image: '10x12_5'
+  },
+  "10x15": {
+    name: "Studio/1BR Size",
+    image: '10x15'
+  },
+  "10x17.5": {
+    name: "1BR Size",
+    image: '10x20'
+  },
+  "10x20": {
+    name: "1BR Size",
+    image: '10x20'
+  },
+  "10x25": {
+    name: "Apartment Size",
+    image: '10x25'
+  },
+  "10x30": {
+    name: "Apartment Size",
+    image: '10x25'
+  },
+  "Contact Us": {
+    name: "Custom Sizing",
+    image: '10x25'
+  }
+}
 
 class Calculator extends Component {
 
@@ -233,7 +233,7 @@ class Calculator extends Component {
           <div>
             <div>
               <span className="highlight" style={{display: 'block', margin: '10px 0 5px 0'}}>{Object.keys(this.state.storage_size_necessary)[0]}</span>
-              Small Closet Size
+              {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].name}
             </div>
             <div style={{display: 'block', margin: '10px 0 15px 0'}}>
               $<span className="highlight">__</span><br/>
