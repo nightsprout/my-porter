@@ -50,9 +50,12 @@ span.highlight {
 * Scaffolding
 */
 
+.page-container {
+  padding: 125px 0 0 0;
+}
+
 .content-container {
   position: relative;
-  top: 125px;
 }
 
 /*

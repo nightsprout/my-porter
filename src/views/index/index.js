@@ -48,7 +48,12 @@ class Index extends Component {
         validZipCode: false,
       })
     }
-    window.location.replace(window.location.href + "#storage-options");
+    if ( !window.location.href.includes("#storage-options") ) {
+      window.location.replace(window.location.href + "#storage-options");
+    }
+    else {
+      window.location.replace(window.location.href);
+    }
   }
 
   handleSubmit(event) {
