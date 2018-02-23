@@ -9,47 +9,58 @@ import './assets/css/calculator_css.css'
 var mapStorageSizeNameToTextStrings = {
   "5x5": {
     name: "Small Closet Size",
-    image: '5x5'
+    image: '5x5',
+    price: 55,
   },
   "5x10": {
-    name: "Walkin Closet Size",
-    image: '5x10'
+    name: "Walk-In Closet Size",
+    image: '5x10',
+    price: 89,
   },
   "5x15": {
-    name: "Bedroom Size",
-    image: '5x15'
+    name: "Small Room Size",
+    image: '5x15',
+    price: 119,
   },
   "10x10": {
-    name: "Garage Size",
-    image: '10x10'
+    name: "Room Size",
+    image: '10x10',
+    price: 139,
   },
   "10x12.5": {
-    name: "Studio Size",
-    image: '10x12_5'
+    name: "Garage Size",
+    image: '10x12_5',
+    price: 169,
   },
   "10x15": {
-    name: "Studio/1BR Size",
-    image: '10x15'
+    name: "Studio Size",
+    image: '10x15',
+    price: 199,
   },
   "10x17.5": {
-    name: "1BR Size",
-    image: '10x20'
+    name: "Large Studio Size",
+    image: '10x20',
+    price: 229,
   },
   "10x20": {
-    name: "1BR Size",
-    image: '10x20'
+    name: "2-Car Garage Size",
+    image: '10x20',
+    price: 259,
   },
   "10x25": {
-    name: "Apartment Size",
-    image: '10x25'
+    name: "Small Apartment Size",
+    image: '10x25',
+    price: 299,
   },
   "10x30": {
     name: "Apartment Size",
-    image: '10x25'
+    image: '10x25',
+    price: 329,
   },
   "Contact Us": {
     name: "Custom Sizing",
-    image: '10x25'
+    image: '10x25',
+    price: false,
   }
 }
 
@@ -235,19 +246,32 @@ class Calculator extends Component {
               <span className="highlight" style={{display: 'block', margin: '10px 0 5px 0'}}>{Object.keys(this.state.storage_size_necessary)[0]}</span>
               {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].name}
             </div>
-            <div style={{display: 'block', margin: '10px 0'}}>
-              $<span className="highlight">__</span><br/>
-              <span style={{position: 'relative', top: '-6px', fontSize: '12px'}}>per month</span>
+            {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].price &&
+              <div style={{display: 'block', margin: '10px 0'}}>
+                $<span className="highlight">
+                  {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].price}
+                </span><br/>
+                <span style={{position: 'relative', top: '-6px', fontSize: '12px'}}>per month</span>
+              </div>
+            }
+          </div>
+          {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].price ?
+            <div>
+              <RaisedButton
+                className="product-book-now"
+                style={{margin: '0 0 15px 0'}}
+                backgroundColor='#98c746'
+                label="Book Now"/><br/>
             </div>
-          </div>
-          <div>
-            <RaisedButton
-              className="product-book-now"
-              style={{margin: '0 0 15px 0'}}
-              backgroundColor='#98c746'
-              label="Book Now"/><br/>
-              or call <a href="tel:8449767837">844.976.7837</a>
-          </div>
+            :
+            <div>
+              <RaisedButton
+                className="product-book-now"
+                style={{margin: '0 0 15px 0'}}
+                backgroundColor='#98c746'
+                label="Call for a Quote"/><br/>
+            </div>
+          }
         </div>
       </div>
       <h2>Storage Calculator</h2>
