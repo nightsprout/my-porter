@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Paper } from 'material-ui-next';
-import { RaisedButton } from 'material-ui';
+// import { RaisedButton } from 'material-ui';
 
+import StorageItem from '../index/components/storageItem'
 import './assets/css/item_css.css'
 
 class Item extends Component {
+  constructor(props) {
+    super(props)
+
+    const locationState = this.props.location.state.props
+    this.state = {
+      ...locationState,
+    }
+  }
   render() {
     return(
       <div className="item page-container">
@@ -24,7 +33,7 @@ class Item extends Component {
           <div className="item-listing">
           <h2 className="h1">Your Personal Storage Solution</h2>
             <div className="item-listing-container">
-              <div className="storage-option five-five">
+              {/* <div className="storage-option five-five">
                 <div className="product-image">
                   <img alt="5 by 5 storage example" src={require('./assets/images/products/5x5.jpg')} />
                 </div>
@@ -46,7 +55,15 @@ class Item extends Component {
                       <span>or call <a href="tel:8449767837">844.976.7837</a></span>
                   </div>
                 </div>
-              </div>
+              </div> */}
+              <StorageItem
+                length={this.state.length}
+                width={this.state.width}
+                text={this.state.text}
+                price={this.state.price}
+                isDefault={this.state.isDefault}
+                zipCode={this.state.zipCode}
+              />
               <div className="item-details">
                 <h3>Product Details</h3>
                 <ul>
