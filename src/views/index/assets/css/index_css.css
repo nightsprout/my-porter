@@ -20,8 +20,9 @@
 .header {
     background-image: url('../images/my-porter-header-overlay.jpg');
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     top: 0;
     left: 0;
