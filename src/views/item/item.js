@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Paper } from 'material-ui-next';
 import { RaisedButton } from 'material-ui';
 
@@ -11,14 +11,12 @@ class Item extends Component {
       <div className="item page-container">
         <Paper className="menu">
           <div className="logo-container">
-          <img alt="site-logo" src={require('./assets/images/logo-tagline.png')} />
+            <Link to="/"><img alt="site-logo" src={require('./assets/images/logo-tagline.png')} /></Link>
           </div>
           <div className="menu-container">
             <ul>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-              <li>Item 4</li> 
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/calculator">Calculator</Link></li>
             </ul>
           </div>
         </Paper>
