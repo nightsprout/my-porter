@@ -48,6 +48,7 @@ class Index extends Component {
         validZipCode: false,
       })
     }
+    window.location.replace(window.location.href + "#storage-options");
   }
 
   handleSubmit(event) {
@@ -66,7 +67,7 @@ class Index extends Component {
 
   renderOptions() {
     return (
-      <div className="storage-options">
+      <div id="storage-options" className="storage-options">
         {storageOptions.map(option => (
           <StorageItem
             key={`${option.length}x${option.width}`}
