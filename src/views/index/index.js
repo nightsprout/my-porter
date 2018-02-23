@@ -96,7 +96,7 @@ class Index extends Component {
                 <div className="product-data">
                   <div>
                     <div>
-                      <span class="highlight">5'x5'</span><br/>
+                      <span className="highlight">5'x5'</span><br/>
                       Small Closet Size
                     </div>
                     <div>
