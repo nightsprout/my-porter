@@ -51,15 +51,19 @@ export default ({ length, width, text, price, isDefault, zipCode }) => (
           <span className="highlight" style={{display: 'block', margin: '10px 0 5px 0'}}>{`${length}' x ${width}'`}</span>
             {text}
         </div>
-        <div style={{display: 'block', margin: '10px 0'}}>
-          $<span className="highlight">{price}</span><br/>
-          { isDefault ?
-            <span style={{position: 'relative', top: '-6px', fontSize: '12px'}}>per month base rate</span>
-            : <span style={{position: 'relative', top: '-6px', fontSize: '12px'}}>
+        { isDefault ?
+            <div style={{display: 'block', margin: '10px 0'}}>
+              $<span className="highlight">--</span><br/>
+              <span style={{position: 'relative', top: '-6px', fontSize: '12px'}}>per month</span>
+            </div>
+            :
+            <div style={{display: 'block', margin: '10px 0'}}>
+              $<span className="highlight">{price}</span><br/>
+              <span style={{position: 'relative', top: '-6px', fontSize: '12px'}}>
                 per month estimated for {zipCode}
               </span>
-          }
-        </div>
+            </div>
+        }
       </div>
       <div>
         { isDefault ?

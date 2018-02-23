@@ -246,24 +246,23 @@ class Calculator extends Component {
               <span className="highlight" style={{display: 'block', margin: '10px 0 5px 0'}}>{Object.keys(this.state.storage_size_necessary)[0]}</span>
               {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].name}
             </div>
-            {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].price &&
+            {/* {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].price &&
               <div style={{display: 'block', margin: '10px 0'}}>
                 $<span className="highlight">
                   {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].price}
                 </span><br/>
                 <span style={{position: 'relative', top: '-6px', fontSize: '12px'}}>per month</span>
               </div>
-            }
+            } */}
           </div>
-          {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].price ?
-            <div>
+            <div style={{display: 'block', margin: '10px 0'}}>
               <RaisedButton
                 className="product-book-now"
                 style={{margin: '0 0 15px 0'}}
                 backgroundColor='#98c746'
                 label="Book Now"/><br/>
             </div>
-            :
+            {/* :
             <div>
               <RaisedButton
                 className="product-book-now"
@@ -271,7 +270,7 @@ class Calculator extends Component {
                 backgroundColor='#98c746'
                 label="Call for a Quote"/><br/>
             </div>
-          }
+          } */}
         </div>
       </div>
       <h2>Storage Calculator</h2>

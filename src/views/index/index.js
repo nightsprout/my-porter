@@ -72,7 +72,7 @@ class Index extends Component {
 
   renderOptions() {
     return (
-      <div id="storage-options" className="storage-options">
+      <div className="storage-options">
         {storageOptions.map(option => (
           <StorageItem
             key={`${option.length}x${option.width}`}
@@ -146,7 +146,7 @@ class Index extends Component {
               </div>
               <div>
                 <img alt="Order back anything you'd like" src={require('./assets/images/process-3.png')} />
-                <p>You order back anything you want from your online visual catalog.</p>
+                <p id="storage-options">You order back anything you want from your online visual catalog.</p>
               </div>
             </div>
           </div>
