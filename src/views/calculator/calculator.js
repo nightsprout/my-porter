@@ -235,9 +235,9 @@ class Calculator extends Component {
               <span className="highlight" style={{display: 'block', margin: '10px 0 5px 0'}}>{Object.keys(this.state.storage_size_necessary)[0]}</span>
               {mapStorageSizeNameToTextStrings[Object.keys(this.state.storage_size_necessary)[0]].name}
             </div>
-            <div style={{display: 'block', margin: '10px 0 15px 0'}}>
+            <div style={{display: 'block', margin: '10px 0'}}>
               $<span className="highlight">__</span><br/>
-              <span style={{fontSize: '12px'}}>per month</span>
+              <span style={{position: 'relative', top: '-6px', fontSize: '12px'}}>per month</span>
             </div>
           </div>
           <div>
