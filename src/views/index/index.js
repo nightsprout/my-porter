@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TextField from 'material-ui/TextField';
 
 import './assets/css/index_css.css'
@@ -12,14 +12,14 @@ class Index extends Component {
       <div className="page-container">
         <Paper className="menu">
           <div className="logo-container">
-           <img alt="site-logo" src={require('./assets/images/logo-tagline.png')} />
+            <Link to="/"><img alt="site-logo" src={require('./assets/images/logo-tagline.png')} /></Link>
           </div>
           <div className="menu-container">
             <ul>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-              <li>Item 4</li> 
+              <li><Link to="/calculator">Storage Calculator</Link></li>
+              <li><Link to="/calculator">Item 2</Link></li>
+              <li><Link to="/calculator">Item 3</Link></li>
+              <li><Link to="/calculator">Item 4</Link></li>
             </ul>
           </div>
         </Paper>
