@@ -11,7 +11,7 @@ class Item extends Component {
   constructor(props) {
     super(props)
 
-    const locationState = this.props.location.state.props
+    const locationState = this.props.location.state
     this.state = {
       ...locationState,
     }
