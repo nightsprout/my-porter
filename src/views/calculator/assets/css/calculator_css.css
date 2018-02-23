@@ -1,2 +1,36 @@
 /* Calculator CSS: */
 
+.calculator-container {
+  padding: 0 0 40px 30px;
+  margin: 0 auto;
+  border: 3px solid #857f7f;
+  border-radius: 7px;
+  width: 990px;
+  position: relative;
+  top: 165px;
+}
+
+.calculator-header {
+  display: block;
+  width: 600px;
+}
+
+.calculator-result-snapshot {
+  display: block;
+  float: right;
+  width: 300px;
+  margin: 0 0 40px 0;
+  position: relative;
+  right: 30px;
+  top: 40px;
+  text-align: center;
+}
+
+.calculator-result-total {
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+.calculator-result-unit {
+  width: 100%;
+  padding: 0 0 20px 0;
+}

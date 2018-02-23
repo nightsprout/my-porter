@@ -1,8 +1,57 @@
 import React, { Component } from 'react';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TextField from 'material-ui/TextField';
+import { RaisedButton } from 'material-ui';
+import { Paper } from 'material-ui';
 
 import './assets/css/calculator_css.css'
+
+// var mapStorageSizeNameToTextStrings = {
+//   "5x5": {
+//     name: "Small Closet Size",
+//     image: '5x5'
+//   },
+//   "5x10": {
+//     name: "Walkin Closet Size",
+//     image: '5x10'
+//   },
+//   "5x15": {
+//     name: "Bedroom Size",
+//     image: '5x15'
+//   },
+//   "10x10": {
+//     name: "Garage Size",
+//     image: '10x10'
+//   },
+//   "10x12.5": {
+//     name: "Studio Size",
+//     image: '10x12_5'
+//   },
+//   "10x15": {
+//     name: "Studio/1BR Size",
+//     image: '10x15'
+//   },
+//   "10x17.5": {
+//     name: "1BR Size",
+//     image: '10x20'
+//   },
+//   "10x20": {
+//     name: "1BR Size",
+//     image: '10x20'
+//   },
+//   "10x25": {
+//     name: "Apartment Size",
+//     image: '10x25'
+//   },
+//   "10x30": {
+//     name: "Apartment Size",
+//     image: '10x25'
+//   },
+//   "Contact Us": {
+//     name: "Custom Sizing",
+//     image: '10x25'
+//   }
+// }
 
 class Calculator extends Component {
 
@@ -79,6 +128,9 @@ class Calculator extends Component {
   }
 
   updateQuantity(itemKey, event) {
+    if ( event.target.value < 0 ) {
+      event.target.value = 0;
+    }
     let updatedItem = {};
     let newInventoryTotal;
     let newStorageSizeNecessary;
@@ -135,11 +187,72 @@ class Calculator extends Component {
     return newStorageSizeNecessary;
   }
 
+  returnSnapshotImage() {
+    if ( Object.keys(this.state.storage_size_necessary)[0] === "5x10" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/5x10.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "5x15" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/5x15.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "10x10" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/10x10.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "10x12.5" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/10x12_5.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "10x15" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/10x15.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "10x17.5" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/10x20.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "10x20" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/10x20.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "10x25" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/10x30.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "10x30" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/10x30.jpg')} />;
+    }
+    else if ( Object.keys(this.state.storage_size_necessary)[0] === "Custom Sizing" ) {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/10x30.jpg')} />;
+    }
+    // else ( Object.keys(this.state.storage_size_necessary)[0] === "5x5" ) {
+    else {
+      return <img alt="Storage thumbnail." src={require('../index/assets/images/products/5x5.jpg')} />;
+    }
+  }
+
   returnForm() {
     let items = [];
-    let container = <div>
-      <div>Total: {this.state.inventory_total}</div>
-      <div>Size Necessary: {Object.keys(this.state.storage_size_necessary)[0]}</div>
+    let container = <div className="calculator-container">
+      <div className="calculator-result-snapshot">
+        {this.returnSnapshotImage()}
+        <div className="product-data">
+          <div>
+            <div>
+              <span className="highlight" style={{display: 'block', margin: '10px 0 5px 0'}}>{Object.keys(this.state.storage_size_necessary)[0]}</span>
+              Small Closet Size
+            </div>
+            <div style={{display: 'block', margin: '10px 0 15px 0'}}>
+              $<span className="highlight">__</span><br/>
+              <span style={{fontSize: '12px'}}>per month</span>
+            </div>
+          </div>
+          <div>
+            <RaisedButton
+              className="product-book-now"
+              style={{margin: '0 0 15px 0'}}
+              backgroundColor='#98c746'
+              label="Book Now"/><br/>
+              or call <a href="tel:8449767837">844.976.7837</a>
+          </div>
+        </div>
+      </div>
+      <h2>Storage Calculator</h2>
+      <div className="calculator-result-total"><strong>Total Cubic Footage Used:</strong> {this.state.inventory_total}</div>
+      <div className="calculator-result-unit"><strong>Minimum Storage Unit Size:</strong> {Object.keys(this.state.storage_size_necessary)[0]}</div>
       {items}
     </div>;
     for (let item in this.state.inventory_types) {
@@ -149,32 +262,63 @@ class Calculator extends Component {
         //   <input value={this.state.inventory_types[item].quantity} onChange={(e) => this.updateQuantity(item, e)} type="number" />
         //   <div>{this.state.inventory_types[item].quantity * this.state.inventory_types[item].value}</div>
         // </div>
-        <div key={item}>
-          <TextField 
-            floatingLabelText={item}
-            value={this.state.inventory_types[item].quantity}
-            onChange={(e) => this.updateQuantity(item, e)}
-            inputStyle={{
-              color: '#555'
-            }}
-            floatingLabelFocusStyle={{
-              color: '#98c746'
-            }}
-            underlineFocusStyle={{
-              border: '1px solid #98c746'
-            }}
-            type="number" />
-        <div>{this.state.inventory_types[item].quantity * this.state.inventory_types[item].value}</div>
-
-        </div>
+        <TextField 
+          key={item}
+          floatingLabelText={item}
+          value={this.state.inventory_types[item].quantity}
+          onChange={(e) => this.updateQuantity(item, e)}
+          style={{
+            width: '300px',
+            margin: '0 30px 0 0',
+          }}
+          inputStyle={{
+            color: '#555'
+          }}
+          floatingLabelFocusStyle={{
+            color: '#98c746'
+          }}
+          underlineFocusStyle={{
+            border: '1px solid #98c746'
+          }}
+          type="number" />
       );
     }
     return container;
   }
 
   render() {
-    return(this.returnForm());
+    return(
+      <div className="page-container">
+        <Paper className="menu">
+          <div className="logo-container">
+            <Link to="/"><img alt="site-logo" src={require('../index/assets/images/logo-tagline.png')} /></Link>
+          </div>
+          <div className="menu-container">
+            <ul>
+              <li><Link to="/calculator">Storage Calculator</Link></li>
+              <li><Link to="/calculator">Item 2</Link></li>
+              <li><Link to="/calculator">Item 3</Link></li>
+              <li><Link to="/calculator">Item 4</Link></li>
+            </ul>
+          </div>
+        </Paper>
+        {this.returnForm()}
+      </div>
+    );
   }
 }
 
 export default Calculator
+
+
+
+
+
+
+
+
+
+
+
+
+
